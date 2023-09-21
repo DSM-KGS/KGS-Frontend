@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Header_main from "./components/Header_main";
 import Header_search from "./components/Header_search";
+import Loginpage from "./page/login"
 import Mainpage from "./page/Mainpage";
 import Searchpage from "./page/Searchpage";
 
