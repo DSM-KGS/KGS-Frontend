@@ -18,6 +18,8 @@ function App() {
       <Routes>
         <Route element={<Header_main />}>
           <Route path="/" element={<Mainpage />} />
+        </Route>
+        <Route element={<Header_login />} >
           <Route path="/login" element={<Loginpage />} />
         </Route>
         <Route element={<Header_search />}>
