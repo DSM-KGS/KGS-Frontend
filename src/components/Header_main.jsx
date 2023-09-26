@@ -4,14 +4,32 @@ import * as S from "../css/Header";
 
 function Header() {
   const [page, setPage] = useState("");
-  const [token, setToken] = useState("aaaa");
+  const [token, setToken] = useState("");
+
+  const onHome = () => {
+    window.location.assign("/");
+  };
+  const onLogin = () => {
+    window.location.assign("/login");
+  };
+  const onLogout = () => {
+    window.location.assign("/logout");
+  };
+  const onSearch = () => {
+    if (token !== "") {
+      window.location.assign("/search");
+    } else {
+      alert("로그인 먼저 해주세요.");
+    }
+  };
+
   return (
     <>
       <S.Background>
         <S.div>
           <S.logo src="img/logo.png"></S.logo>
           <S.div>
-            <S.clickTitle>
+            <S.clickTitle onClick={onHome}>
               <S.title
                 style={{
                   color: "white",
@@ -21,7 +39,7 @@ function Header() {
               </S.title>
             </S.clickTitle>
             {token ? (
-              <S.noClickTitle>
+              <S.noClickTitle onClick={onLogout}>
                 <S.title
                   style={{
                     color: "#a79dbb",
@@ -31,7 +49,7 @@ function Header() {
                 </S.title>
               </S.noClickTitle>
             ) : (
-              <S.noClickTitle>
+              <S.noClickTitle onClick={onLogin}>
                 <S.title
                   style={{
                     color: "#a79dbb",
@@ -41,7 +59,7 @@ function Header() {
                 </S.title>
               </S.noClickTitle>
             )}
-            <S.noClickTitle>
+            <S.noClickTitle onClick={onSearch}>
               <S.title
                 style={{
                   color: "#a79dbb",
