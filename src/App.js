@@ -11,6 +11,7 @@ import Header_search from "./components/Header_search";
 import Mainpage from "./page/Mainpage";
 import Searchpage from "./page/Searchpage";
 import Loginpage from "./page/loginPage";
+import Logoutpage from "./page/logoutPage"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </Route>
         <Route element={<Header_login />} >
           <Route path="/login" element={<Loginpage />} />
+          <Route path="logout" element={<Logoutpage />} />
         </Route>
         <Route element={<Header_search />}>
           <Route path="/search" element={<Searchpage/>}/>
