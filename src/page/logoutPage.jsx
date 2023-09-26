@@ -1,6 +1,5 @@
 import react from 'react';
 import styled from 'styled-components';
-import axios from "axios"
 
 function logoutPage() {
   return (

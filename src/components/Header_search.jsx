@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import * as S from "../css/Header";
 
 function Header() {
-  const [page, setPage] = useState("");
   const [token, setToken] = useState("aaaa");
   return (
     <>
