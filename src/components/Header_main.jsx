@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import * as S from "../css/Header";
+import axios from "axios";
+import * as S from "../style/Header";
 
 function Header() {
-  const [token, setToken] = useState("aaaa");
+  const [token, setToken] = useState("");
   return (
     <>
       <S.Background>

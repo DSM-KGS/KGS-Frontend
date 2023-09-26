@@ -1,59 +1,60 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import * as S from "../css/Header";
+import axios from "axios";
+import * as S from "../style/Header";
 
 function Header() {
-    const [token, setToken] = useState("");
+  const [token, setToken] = useState("");
   return (
     <>
-    <S.Background>
-      <S.div>
-        <S.logo src="img/logo.png"></S.logo>
+      <S.Background>
         <S.div>
-          <S.noClickTitle>
-            <S.title
-              style={{
-                color: "#a79dbb",
-              }}
-            >
-              HOME
-            </S.title>
-          </S.noClickTitle>
-          {token ? (
-            <S.clickTitle>
+          <S.logo src="img/logo.png"></S.logo>
+          <S.div>
+            <S.noClickTitle>
               <S.title
                 style={{
-                  color: "white",
+                  color: "#a79dbb",
                 }}
               >
-                LOG OUT
+                HOME
               </S.title>
-            </S.clickTitle>
-          ) : (
-            <S.clickTitle>
+            </S.noClickTitle>
+            {token ? (
+              <S.clickTitle>
+                <S.title
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  LOG OUT
+                </S.title>
+              </S.clickTitle>
+            ) : (
+              <S.clickTitle>
+                <S.title
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  LOG IN
+                </S.title>
+              </S.clickTitle>
+            )}
+            <S.noClickTitle>
               <S.title
                 style={{
-                  color: "white",
+                  color: "#a79dbb",
                 }}
               >
-                LOG IN
+                SEARCH
               </S.title>
-            </S.clickTitle>
-          )}
-          <S.noClickTitle>
-            <S.title
-              style={{
-                color: "#a79dbb",
-              }}
-            >
-              SEARCH
-            </S.title>
-          </S.noClickTitle>
+            </S.noClickTitle>
+          </S.div>
         </S.div>
-      </S.div>
-    </S.Background>
-    <Outlet />
-  </>
+      </S.Background>
+      <Outlet />
+    </>
   );
 }
 

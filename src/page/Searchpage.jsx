@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as S from "../css/Search.js";
+import * as S from "../style/Search.js";
 import axios from "axios";
 
 function MainPage() {

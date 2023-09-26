@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import * as S from "../css/Main";
-import * as A from "../css/Main2";
+import * as S from "../style/Main";
+import * as A from "../style/Main2";
 import axios from "axios";
 
 function MainPage() {
